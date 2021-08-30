@@ -9,6 +9,10 @@ Before | After
 :-------------------------:|:-------------------------:
 ![Image of city day and night](Images/day_and_night.png) | ![Image of city day and night negated](Images/day_and_night_negated.png)
 ![Image of city day and night](Images/day_and_night.png) | ![Image of city day and night brightened](Images/day_and_night_brightened_45.png)
+![Image of city day and night](Images/day_and_night.png) | ![Image of city day and night sharpened](Images/day_and_night_sharpened.png)
+![Image of city day and night](Images/day_and_night.png) | ![Image of city day and night smoothed](Images/day_and_night_smoothed.png)
+![Image of city day and night](Images/day_and_night.png) | ![Image of city day and night grayscaled](Images/day_and_night_grayscaled.png)
+![Image of city day and night](Images/day_and_night.png) | ![Image of city day and night contrasted](Images/day_and_night_contrasted.png)
 
 ## Usage
 ```
