@@ -27,8 +27,10 @@ image_operations: $(OBJS)
 clean:
 	rm -rf src/*.o src/*.d image_operations
 
-tar:
-	clean
+debug: CXXFLAGS = -DDEBUG -Wall -g -I inc
+debug: image_operations
+
+tar: clean
 	tar zcvf image_operations.tgz $(SOURCE) inc/*.h Makefile
 
 help:
