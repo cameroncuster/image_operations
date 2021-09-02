@@ -5,8 +5,8 @@ modification and customization.
 
 ## Example
 *Converted from PPM to PNG format for display*
-Before | After
-|-------------------------|-------------------------|
+| Before | After |
+| --- | --- |
 | Original | Negated |
 | ![Image of city day and night](Images/day_and_night.png) | ![Image of city day and night negated](Images/day_and_night_negated.png) |
 | Original | Brightened by 45 |
