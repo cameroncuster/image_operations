@@ -1,7 +1,11 @@
-SOURCE = src/imageOperations.cpp \
-		 src/imageFileIO.cpp \
-		 src/memory.cpp \
-		 src/main.cpp
+SOURCE_DIR = src
+
+SOURCE = $(SOURCE_DIR)/imageOperations.cpp \
+		 $(SOURCE_DIR)/imageFileIO.cpp \
+		 $(SOURCE_DIR)/memory.cpp \
+		 $(SOURCE_DIR)/main.cpp
+
+INCLUDE_DIR = inc
 
 OBJS = $(SOURCE:.cpp=.o)
 
@@ -12,7 +16,7 @@ GCC = g++
 LINK = g++
 
 # Compiler flags
-CFLAGS = -Wall -O3 -I inc
+CFLAGS = -Wall -O3 -I $(INCLUDE_DIR)
 CXXFLAGS = $(CFLAGS)
 
 .PHONY: clean
@@ -25,13 +29,13 @@ image_operations: $(OBJS)
 	$(LINK) -o $@ $^
 
 clean:
-	rm -rf src/*.o src/*.d image_operations
+	rm -rf $(SOURCE_DIR)/*.o $(SOURCE_DIR)/*.d image_operations
 
-debug: CXXFLAGS = -DDEBUG -Wall -g -I inc
+debug: CXXFLAGS = -DDEBUG -Wall -g -I $(INCLUDE_DIR)
 debug: image_operations
 
 tar: clean
-	tar zcvf image_operations.tgz $(SOURCE) inc/*.h Makefile
+	tar zcvf image_operations.tgz $(SOURCE) $(INCLUDE_DIR)/*.h Makefile
 
 help:
 	@echo " make all   - builds the main target"
